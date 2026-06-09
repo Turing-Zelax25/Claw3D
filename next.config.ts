@@ -57,6 +57,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const nextConfig: NextConfig = {
+  // Served same-origin under turing.zelaxholdings.com/office (embedded in hermes-webui).
+  // basePath prefixes routes, API, and _next assets so everything lives under /office.
+  basePath: "/office",
   turbopack: {
     root: path.resolve(__dirname),
   },
